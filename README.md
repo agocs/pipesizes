@@ -2,7 +2,7 @@
 
 A really lazy tool to look up common pipe sizes for use in hobby projects.
 
-View it here: https://agocs.github.io/pipesizes/
+View it here: <https://agocs.github.io/pipesizes/>
 
 ## Editing
 
@@ -12,5 +12,16 @@ Click `Edit` in the upper-right corner, and create a "pull request" that we will
 
 ## To-do
 
-The current version was built really quickly using d3.js to slap together an HTML `table`. 
-I want to switch to using grid.js to make a better looking, searchable table. 
+The current version was built really quickly using d3.js to slap together an HTML `table`.
+I want to switch to using grid.js to make a better looking, searchable table.
+
+## Docker
+
+There is a docker container because you probably can't just run a html file on your filesystem that requires javascript without CORS errors.
+
+```sh
+docker build -t pipesizes .
+docker run -d -p 8080:80 --name pipesizes pipesizes
+```
+
+The launch your browser on localhost
