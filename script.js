@@ -28,7 +28,7 @@ var tabulate = function (data,columns) {
     return table;
   }
   
-  d3.csv('data.csv',function (data) {
+  d3.csv('pipesizes.csv',function (data) {
       var columns = ['Nominal','OD','Tolerance','Notes']
     tabulate(data,columns)
   })
